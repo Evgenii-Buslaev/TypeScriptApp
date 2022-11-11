@@ -7,7 +7,7 @@ export const fetchTodos = (page = 1, limit = 10) => {
     try {
       dispatch({ type: TodoActionTypes.FETCH_TODOS });
       const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/users",
+        "https://jsonplaceholder.typicode.com/todos",
         { params: { _page: page, _limit: limit } }
       );
       setTimeout(() => {
